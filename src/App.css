@@ -1,3 +1,171 @@
+:root {
+  --primary-color: #1D2A35;
+  --secondary-color: #38444D;
+  --ternary-color: #059862;
+  --quatenary-color: #000;
+  --quinary-color: #fff;
+  --six-color: #FFB3BB;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--ternary-color);
+  border-radius: 10px;
+}
+
+::-webkit-resizer {
+  background-color: var(--secondary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  width: 100%;
+  min-height: 100vh;
   text-align: center;
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+
+.Editor {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border: none;
+}
+
+.Editor textarea {
+  width: 100%;
+  min-height: 470px;
+  resize: vertical;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  color: var(--quinary-color);
+  font-family: "Fira Mono", monospace;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.Editor textarea.full {
+  min-height: 80vh;
+}
+
+.Editor textarea:focus {
+  outline: none;
+}
+
+.Previewer {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 0 0 5px 5px;
+}
+
+.PreviewerDisplay {
+  min-height: 300px;
+  padding: 10px 30px;
+  text-align: left;
+  color: var(--quinary-color);
+  line-height: 150%;
+}
+
+.PreviewerDisplay pre {
+  width: 100%;
+  background-color: #15202B;
+  padding: 10px;
+  margin: 10px auto;
+  line-height: 200%;
+  border-radius: 5px;
+}
+
+.PreviewerDisplay code {
+  background-color: #15202B;
+  font-family: "Fira Mono", monospace;
+}
+
+.PreviewerDisplay a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.PreviewerDisplay a:hover {
+  color: var(--six-color);
+}
+
+.PreviewerDisplay blockquote {
+  border-left: 3px solid var(--ternary-color);
+  padding-left: 5px;
+}
+
+.PreviewerDisplay img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.toolbar {
+  background-color: var(--ternary-color);
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  color: var(--quatenary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbarIcon {
+  width: 25px;
+  fill: var(--quatenary-color);
+}
+
+.leftToolbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.leftToolbar span {
+  margin-left: 10px;
+}
+
+.rightToolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.fullScreen {
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.fullScreen:hover {
+  fill: var(--quinary-color);
+}
+
+.smallScreen {
+  cursor: pointer;
+}
+
+.smallScreen:hover {
+  fill: var(--quinary-color);
+}
+
+.hide {
+  display: none;
 }
