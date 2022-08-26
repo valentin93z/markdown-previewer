@@ -26,7 +26,6 @@ class App extends React.Component {
     })
   }
 
-
   fullEditor() {
     switch (this.state.classPreviewer) {
 
@@ -53,7 +52,6 @@ class App extends React.Component {
         break;
     }
   }
-
 
   fullPreviewer() {
     switch (this.state.classEditor) {
@@ -112,7 +110,7 @@ class App extends React.Component {
 class Editor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {};
   }
   render() {
     return (
@@ -136,7 +134,7 @@ class Editor extends React.Component {
 class Previewer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {};
   }
   render() {
     return (
